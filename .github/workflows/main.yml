@@ -16,10 +16,9 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-
       # configure gcloud `setup-gcloud` automatically
       - id: 'auth'
-      - name: Authenticate to Google Cloud
+        name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v1
         with:
           workload_identity_provider: "projects/919227918560/locations/global/workloadIdentityPools/github/providers/mam29"
