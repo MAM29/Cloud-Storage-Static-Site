@@ -16,9 +16,6 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        
       # configure gcloud `setup-gcloud` automatically
       - id: 'auth'
         name: Authenticate to Google Cloud
